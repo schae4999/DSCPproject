@@ -1,0 +1,9 @@
+executable = run_model.sh
+transfer_input_files = model.py,metadata.tar.gz
+output = model.out
+error = model.err
+log = model.log
+request_cpus = 1
+request_memory = 4GB
+request_disk = 5GB
+queue
