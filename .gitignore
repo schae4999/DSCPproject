@@ -1,0 +1,15 @@
+# Large datasets and generated files
+job_inputs/
+extracted_features/
+sample_features.csv
+*.tar.gz
+
+# HTCondor logs
+logs/
+*.log
+*.out
+*.err
+
+# Python
+__pycache__/
+*.pyc

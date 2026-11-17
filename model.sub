@@ -1,0 +1,20 @@
+universe = vanilla
+
+executable = run_model.sh
+
+container_image = file:///staging/groups/STAT_DSCP/python_numpy_pandas_sklearn.sif
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+transfer_input_files = train_model.py, sample_features.csv
+
+request_cpus = 1
+request_memory = 2GB
+request_disk = 1GB
+
+log = model.log
+output = model.out
+error = model.err
+
+queue 1

@@ -1,0 +1,22 @@
+universe = vanilla
+
+executable = run_features.sh
+arguments = $(problem_id)
+
+transfer_input_files = extract_features.py, problem_list.csv, job_inputs/$(problem_id).tar.gz
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+transfer_output_files = extracted_features/features_$(problem_id).csv
+transfer_output_remaps = "features_$(problem_id).csv = extracted_features/features_$(problem_id).csv"
+
+request_cpus = 1
+request_memory = 1GB
+request_disk = 1GB
+
+log = logs/$(problem_id).log
+output = logs/$(problem_id).out
+error = logs/$(problem_id).err
+
+queue problem_id from test_problems.txt
