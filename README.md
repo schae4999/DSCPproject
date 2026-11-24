@@ -24,6 +24,7 @@ This baseline uses only `code_size`. Future models can add AST-derived code feat
 
 ## Files
 
+- `filter.py`: filters the accepted Python submissions
 - `model.py`: fits and evaluates the baseline model
 - `model.sub`: CHTC job submission file
 - `run_model.sh`: runs the model in a CHTC job
